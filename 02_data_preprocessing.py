@@ -38,7 +38,7 @@ def convert_to_dateformat(date:str):
 
     return datetime.strptime(string_date, '%d %m %Y').date() #.date() in order not to have time
 
-df = pd.read_excel("results/full_bank_data.xlsx")
+df = pd.read_excel("full_bank_data.xlsx")
 df["date"] = df["date"].map(lambda date: convert_to_dateformat(date)) #safe a new column (with the same name)
 
 # control if the format is correct now:
@@ -68,6 +68,6 @@ print(df)
 print(df.dtypes)
 
 #3: store df to excel file
-df.to_excel("results/bank_data_clean.xlsx", index=False)
+df.to_excel("bank_data_clean.xlsx", index=False)
 
 

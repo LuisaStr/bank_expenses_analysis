@@ -102,6 +102,6 @@ df = pd.DataFrame(data_dict)
 
 #9: safe the columns in an excel file
 
-df.to_excel("results/full_bank_data.xlsx", index=False)
+df.to_excel("full_bank_data.xlsx", index=False)
 df.dtypes
 
